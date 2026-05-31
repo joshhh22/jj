@@ -1,7 +1,12 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
+
+import Navbar from "@/components/layout/navbar";
 import SmoothScroll from "@/components/motion/smooth-scroll";
-import FadeUp from "@/components/motion/fade-up";
+import Loader from "@/components/layout/loader";
+import StarsBackground from "@/components/layout/stars";
+import MusicPlayer from "@/components/layout/music-player";
 
 export const metadata: Metadata = {
   title: "Our Story",
@@ -15,14 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
+        <Loader />
+        <StarsBackground />
+        <MusicPlayer />
         <SmoothScroll />
-
-        <FadeUp>
-          <h1 className="gradient-text text-7xl font-bold">
-            Joshua & Her
-          </h1>
-        </FadeUp>
+        <Navbar />
 
         {children}
       </body>

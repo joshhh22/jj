@@ -1,17 +1,21 @@
+import HeroSection from "@/components/sections/hero";
+import AnniversarySection from "@/components/sections/anniversary";
+import TimelineSection from "@/components/sections/timeline";
+import GallerySection from "@/components/sections/gallery";
+import DailyQuestionSection from "@/components/sections/daily-question";
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[var(--background)] text-white">
-      <section className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <h1 className="gradient-text text-7xl font-bold">
-            Joshua & Her
-          </h1>
+    <main className="overflow-hidden">
+      <HeroSection />
 
-          <p className="mt-6 text-zinc-300 text-xl">
-            still choosing each other everyday
-          </p>
-        </div>
-      </section>
+      <AnniversarySection />
+
+      <TimelineSection />
+
+      <GallerySection />
+
+      <DailyQuestionSection />
     </main>
   );
 }
